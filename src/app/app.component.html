@@ -1,18 +1,33 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<el-container>
-  <el-header>
+<el-container class="container-border">
+  <el-header class="Blue">
     <app-navbar></app-navbar>
   </el-header>
   <el-container>
-    <el-aside width="15%" el-row="100">
+    <el-aside width="22%">
       <app-menu></app-menu>
     </el-aside>
     <el-main>
       <router-outlet></router-outlet>
       <!-- Routed views go here -->
     </el-main>
+    <!--<div el-row>
+      <div el-col [span]="6">
+        <div class="grid-content bg-purple">
+          <app-menu></app-menu>
+        </div>
+      </div>
+      <div el-col [span]="18">
+        <div class="grid-content bg-purple">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>-->
   </el-container>
 </el-container>
+
+
+
 
 
 
