@@ -1,3 +1,77 @@
-<p>
-  tag works!
-</p>
+<div el-row justify="center">
+  <div el-col span="22">
+    <div class="grid-content bg-purple-dark">
+      <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb-item to="/dash">博客栏目</el-breadcrumb-item>
+        <el-breadcrumb-item>内容管理</el-breadcrumb-item>
+        <el-breadcrumb-item to="/tag">标签列表</el-breadcrumb-item>
+      </el-breadcrumb>
+      <div el-row class="top">
+        <div el-col span="12">
+          <ul class="list">
+            <li>
+              <el-table [model]="tableData" [scroll-x]="true" center="all">
+                <el-table-column model-key="name" label="姓名" width="140">
+                </el-table-column>
+                <el-table-column model-key="date" label="日期" width="140">
+                </el-table-column>
+                <el-table-column model-key="address" label="地址" width="140" [render-html]="true">
+                </el-table-column>
+                <el-table-column label="操作" width="120">
+                  <ng-template #slot let-scope="scope">
+                    <el-button type="text" size="small" (click)="handle(scope)">删除</el-button>
+                  </ng-template>
+                </el-table-column>
+                <el-table-column label="操作" width="120">
+                  <ng-template #slot let-scope="scope">
+                    <el-button type="text" size="small" (click)="handle(scope)">删除</el-button>
+                  </ng-template>
+                </el-table-column>
+              </el-table>
+            </li>
+            <li>
+              <el-pagination [total]="500"
+                             [page-size]="20"
+                             [layout]="['prev', 'pager', 'next', 'size']">
+              </el-pagination>
+            </li>
+          </ul>
+        </div>
+        <div el-col span="12">
+          <div class="container">
+            <div class="row clearfix">
+              <div class="col-md-12 column">
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail3" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="inputPassword3" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <div class="checkbox">
+                        <label><input type="checkbox" />Remember me</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-positive">Sign in</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
